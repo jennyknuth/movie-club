@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   //insert into users (name) values ('jeff')
 
   var pg = require('pg');
-  var conString = "postgres://localhost/movie_club";
+  var conString = process.env.DATABASE_URL || "postgres://localhost/movie_club";
 
 
   //this initializes a connection pool
