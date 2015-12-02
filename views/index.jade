@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  form(action="/users" method="post")
+    input(type="text" name="name")
+    input(type="submit")
+
+  table
+    thead
+      tr
+        th ID
+        th Name
+    tbody
+      for user in users
+        tr
+          td= user.id
+          td= user.name
+    
