@@ -18,7 +18,7 @@ router.post('/', function(req, res, next) {
       return console.error('error fetching client from pool', err);
     }
     //put actual sql statement here
-    client.query('insert into users (name) values($1)', [req.body.name], function(err, result) {
+    client.query('insert into users (name, age) values($1, $2)', [req.body.name, req.body.age], function(err, result) {
       //call `done()` to release the client back to the pool
       done();
 

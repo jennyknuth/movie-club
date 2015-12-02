@@ -3,6 +3,7 @@ extends layout
 block content
   form(action="/users" method="post")
     input(type="text" name="name")
+    input(type="number" name="age" )
     input(type="submit")
 
   table
@@ -15,4 +16,4 @@ block content
         tr
           td= user.id
           td= user.name
-    
+          td= age
