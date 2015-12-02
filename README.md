@@ -1,3 +1,3 @@
 # movie-club
 
-git@github.com:jennyknuth/movie-club.git
+https://arcane-earth-1565.herokuapp.com/
